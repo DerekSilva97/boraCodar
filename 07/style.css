@@ -8,8 +8,172 @@
 
 :root {
   font-size: 62.5%;
+  font-family: 'Roboto';
+}
+
+.sr-only{
+  position: absolute;
+  width: .1rem;
+  height: .1rem;
+  padding: 0;
+  margin: -.1rem;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+input,select,button{
+  font-family: 'Roboto';
+  all: unset;
 }
 
 body {
   font-size: 1.6rem;
+}
+
+
+
+header{
+  min-height: 53.2rem;
+  background-color: #F8F8FF;
+
+  position: relative;
+  overflow: hidden;
+
+  display: grid;
+  place-content: center;
+}
+
+header::before{
+  content: '';
+  background-image: url(./assets/bg-header-01.svg);
+  width: 40.7rem;
+  height: 34.5rem;
+
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+}
+
+header::after{
+  content: '';
+  background-image: url(./assets/bg-header-02.svg);
+  width: 41.4rem;
+  height: 33rem;
+
+  position: absolute;
+  z-index: 0;
+  bottom: -1.2rem;
+  right: 0;
+}
+
+header .content .top{
+  text-align: center;
+}
+
+header .content {
+  width: fit-content;
+
+  position: relative;
+  z-index: 1;
+}
+
+header p{
+  color: #E45858;
+  font-weight: 500;
+  line-height: 160%;
+
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  text-shadow: .0rem .4rem .4rem rgba(0, 0, 0, 0.25);
+}
+
+
+header h1 {
+  font-size: 4.8rem;
+  line-height: 125%;
+  
+  color: #121214;
+
+  max-width: 64.7rem;
+  margin: 1.8rem auto 0;
+}
+
+header span{
+  color:#6246EA;
+}
+
+form{
+  margin-top: 4rem;
+  display: flex;
+
+  padding: 4rem;
+  gap: 2.4rem;
+
+  background: #FFFFFF;
+  border: 0.1rem solid #EAEAEA;
+  border-radius: 1rem;
+}
+
+.search-field{
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+
+  background: #F4F4FF;
+  border-radius: .5rem;
+  padding: 1.2rem .8rem 1.2rem 1.4rem;
+}
+
+input, select{
+  color: #7C7C8A;
+  min-width: 29rem;
+}
+
+.search-field i {
+  font-size: 2.4rem;
+  color: #E45858;
+}
+
+select, .select{
+  position: relative;
+}
+
+select{
+  z-index: 1;
+}
+
+.select i.ph-caret-down-light {
+  position: absolute;
+  right: 1rem;
+  z-index: 0;
+  color: #858793;
+}
+
+form button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.2rem 3.2rem;
+  gap: .8rem;
+
+  background: #6246EA;
+  border-radius: .5rem;
+  
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+
+  text-transform: uppercase;
+  color: #FFFFFF;
+
+  cursor: pointer;
+}
+
+button:hover{
+  background: #583edf;
+  transition: background 200ms;
 }
